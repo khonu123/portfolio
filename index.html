@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Salai Cho Mana Thang — web application portfolio">
+<title>Salai Cho Mana Thang — App Portfolio</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1a2b;--panel2:#11233a;--text:#eef5ff;--muted:#9eb0c7;--line:#20354f;--accent:#6dd5ff;--accent2:#8b7cff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 20% 0,#153156 0,transparent 35%),linear-gradient(180deg,#07111f,#081522 55%,#07111f);color:var(--text)}
+a{color:inherit}.wrap{max-width:1160px;margin:auto;padding:0 24px}.hero{padding:88px 0 54px}.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800}
+h1{font-size:clamp(42px,7vw,78px);line-height:.98;margin:14px 0 20px;max-width:900px;letter-spacing:-.04em}.lead{font-size:clamp(18px,2vw,22px);line-height:1.7;color:var(--muted);max-width:780px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 17px;border-radius:12px;text-decoration:none;font-weight:800;border:1px solid var(--line);background:#0d1a2b}.btn.primary{background:linear-gradient(135deg,var(--accent),#7f9cff);color:#06101b;border:0}
+.meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px;color:var(--muted);font-size:14px}.meta strong{color:var(--text)}
+section{padding:28px 0 72px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.section-head h2{font-size:30px;margin:0}.section-head p{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:linear-gradient(180deg,rgba(17,35,58,.94),rgba(9,24,40,.96));border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 18px 50px #0003;display:flex;flex-direction:column;min-height:310px}.card-top{display:flex;justify-content:space-between;gap:12px}.num{color:#7186a2;font-weight:900}.status{font-size:12px;font-weight:900;padding:6px 9px;border-radius:999px;background:#102a29;color:#8ff0c5;border:1px solid #28544f}
+.card h3{font-size:24px;margin:28px 0 12px}.card p{color:var(--muted);line-height:1.65;margin:0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.tag{font-size:12px;padding:7px 9px;border-radius:999px;background:#0a1727;border:1px solid var(--line);color:#b9c7d9}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:14px}.links a{text-decoration:none;font-weight:800;font-size:14px;padding:10px 12px;border-radius:10px;background:#0a1727;border:1px solid var(--line)}
+footer{border-top:1px solid var(--line);padding:28px 0 50px;color:var(--muted);font-size:14px}.future{background:linear-gradient(135deg,#122b45,#151f3d);border:1px dashed #365678;border-radius:20px;padding:24px;margin-top:18px}.future h3{margin:0 0 8px}
+@media(max-width:760px){.hero{padding-top:58px}.grid{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.card{min-height:0}}
+</style>
+</head><body>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Application Portfolio</div>
+<h1>Web apps built for real operational needs.</h1>
+<p class="lead">A curated portfolio of community, census, inventory, finance, and event-related web applications. Production source code is kept private unless a project is intentionally public.</p>
+<div class="actions">
+<a class="btn primary" href="#projects">View projects</a>
+<a class="btn" href="https://github.com/khonu123" target="_blank" rel="noopener">GitHub profile ↗</a>
+</div>
+<div class="meta"><span><strong>Owner:</strong> Salai Cho Mana Thang</span><span><strong>Focus:</strong> Practical web applications</span><span><strong>Portfolio:</strong> Continuously updated</span></div>
+</div></header>
+
+<main class="wrap">
+<section id="projects">
+<div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Current applications</h2></div><p>Live links are included where a public demo is available.</p></div>
+<div id="grid" class="grid"></div>
+<div class="future">
+<h3>More projects will be added here.</h3>
+<p>This portfolio is designed as the single public link for current and future apps. New projects can be added without changing the portfolio address.</p>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Salai Cho Mana Thang · Built as a public project showcase. Private application data and private source repositories are not exposed here.</div></footer>
+
+<script>
+const projects=[{name:"Kitchen Inventory & Supply Management",desc:"Inventory and supply management for kitchen operations, including item records, purchasing, suppliers, role-based access, photos, and bilingual English/Myanmar UI.",status:"Live",tech:["Cloudflare Workers","D1","R2","JavaScript"],live:"https://kitchen-inventory-app.scmn.workers.dev",details:"https://github.com/khonu123/Kitchen-Inventory-App-Portfolio"},
+{name:"ABC Community Management App",desc:"Community administration web app for members, finance, cases, population records, settings, and role-based access.",status:"Live",tech:["Firebase","Firestore","Firebase Hosting","Role-based access"],live:"https://community1-b8141.web.app/",details:"https://github.com/khonu123/abc-community-portfolio"},
+{name:"Gua Census Myanmar",desc:"A census and population data collection application for Myanmar-focused records, with structured data entry and administrative workflows.",status:"Live",tech:["Firebase","Firestore","React","Web app"],live:"https://gua-census-myanmar.pages.dev",details:"https://github.com/khonu123/Gua-Census-Myanmar-Portfolio"},
+{name:"Gua Census Malaysia",desc:"A Malaysia-focused census application for structured household and population data collection with Firebase-backed records.",status:"Live",tech:["Firebase","Firestore","React","Firebase Hosting"],live:"https://gua-census-malaysia-2fe41.web.app"},
+{name:"LRHM Income App",desc:"An income-recording application created for LRHM to keep income entries organized in a simple web interface.",status:"Project",tech:["Web app","Income records"],repo:"https://github.com/khonu123/LRHM-income-app"},
+{name:"MyEventSystem",desc:"A private React and TypeScript project currently under development, built with a modern Vite-based frontend stack.",status:"In development",tech:["React","TypeScript","Vite"],private:true}
+];
+
+const grid=document.getElementById("grid");
+grid.innerHTML=projects.map((p,i)=>`
+<article class="card">
+<div class="card-top"><span class="num">0${i+1}</span><span class="status">${p.status}</span></div>
+<h3>${p.name}</h3>
+<p>${p.desc}</p>
+<div class="tags">${p.tech.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+<div class="links">
+${p.live?`<a href="${p.live}" target="_blank" rel="noopener">View live app ↗</a>`:""}
+${p.details?`<a href="${p.details}" target="_blank" rel="noopener">Project details ↗</a>`:""}
+${p.repo?`<a href="${p.repo}" target="_blank" rel="noopener">GitHub project ↗</a>`:""}
+${p.private?`<span class="tag">Private source</span>`:""}
+</div>
+</article>`).join("");
+</script>
+</body>
+</html>
