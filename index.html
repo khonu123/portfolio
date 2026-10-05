@@ -46,6 +46,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 50px;color:var(--muted);f
 <script>
 const projects=[{name:"Digital Bridge",desc:"A bilingual website for practical digital services, news, and contact. Mobile-friendly opening scenes show moving photographs clearly, with readable text placed below the images.",status:"Live",tech:["Cloudflare Workers","D1","R2","React","English/Myanmar"],live:"https://digital-bridge.scmn.workers.dev/"},
 {name:"Digital Bridge Auto AI Publisher",desc:"An n8n workflow on Google Cloud that automatically publishes fresh IT news in Burmese with matching technology illustrations to the Digital Bridge Facebook Page at five-hour intervals, when fresh news is available. Includes duplicate checks and automatic retries without manual approval.",status:"Live",tech:["n8n","Google Cloud","Gemini AI","Facebook Graph API","Myanmar"],live:"https://www.facebook.com/DigitalBridgeLink/"},
+{"name": "Democracy & National Equality Publisher", "desc": "An n8n workflow on Google Cloud that prepares Burmese educational articles on democracy, equality, peaceful dialogue, and humanitarian assistance. Drafts are sent for human approval at 7 AM and 7 PM Malaysia time. Approved drafts publish the reviewed image, with an explicitly reviewed text-only fallback when an image is unavailable. A live image-and-text publication was verified on 5 October 2026.", "status": "Live · Approval required", "tech": ["n8n", "Google Cloud", "Gemini AI", "Facebook Graph API", "Human approval"], "live": "https://www.facebook.com/1298404463358815", "liveLabel": "View Facebook Page ↗", "details": "https://www.facebook.com/1298404463358815/posts/122120634993466215", "detailsLabel": "View verified post ↗"},
 {name:"Kitchen Inventory & Supply Management",desc:"Inventory and supply management for kitchen operations, including item records, purchasing, suppliers, role-based access, photos, and bilingual English/Myanmar UI.",status:"Live",tech:["Cloudflare Workers","D1","R2","JavaScript"],live:"https://kitchen-inventory-app.scmn.workers.dev",details:"https://github.com/khonu123/Kitchen-Inventory-App-Portfolio"},
 {name:"ABC Community Management App",desc:"Community administration web app for members, finance, cases, population records, settings, and role-based access.",status:"Live",tech:["Firebase","Firestore","Firebase Hosting","Role-based access"],live:"https://community1-b8141.web.app/",details:"https://github.com/khonu123/abc-community-portfolio"},
 {name:"Gua Census Myanmar",desc:"A census and population data collection application for Myanmar-focused records, with structured data entry and administrative workflows.",status:"Live",tech:["Firebase","Firestore","React","Web app"],live:"https://gua-census-myanmar.pages.dev",details:"https://github.com/khonu123/Gua-Census-Myanmar-Portfolio"},
@@ -62,8 +63,8 @@ grid.innerHTML=projects.map((p,i)=>`
 <p>${p.desc}</p>
 <div class="tags">${p.tech.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
 <div class="links">
-${p.live?`<a href="${p.live}" target="_blank" rel="noopener">View live app ↗</a>`:""}
-${p.details?`<a href="${p.details}" target="_blank" rel="noopener">Project details ↗</a>`:""}
+${p.live?`<a href="${p.live}" target="_blank" rel="noopener">${p.liveLabel||"View live app ↗"}</a>`:""}
+${p.details?`<a href="${p.details}" target="_blank" rel="noopener">${p.detailsLabel||"Project details ↗"}</a>`:""}
 ${p.repo?`<a href="${p.repo}" target="_blank" rel="noopener">GitHub project ↗</a>`:""}
 ${p.private?`<span class="tag">Private source</span>`:""}
 </div>
